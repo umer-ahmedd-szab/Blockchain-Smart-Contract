@@ -1,13 +1,11 @@
 // SPDX-License-Identifier: MIT
+// Compatible with OpenZeppelin Contracts ^5.0.0
+pragma solidity ^0.8.22;
 
-pragma solidity >=0.8.2 <0.9.0;
+import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol";
-
-contract UmerToken is ERC20, ERC20Permit
-{
-    constructor() ERC20("UmerToken", "UT") ERC20Permit("UmerToken") {}
-
-    
+contract UmerToken is ERC20 {
+    constructor(address recipient) ERC20("UmerToken", "UTK") {
+        _mint(recipient, 10000 * 10 ** decimals());
+    }
 }
