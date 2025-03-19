@@ -245,11 +245,11 @@
 	},
 	"sources": {
 		"contracts/UmerToken_flattened.sol": {
-			"keccak256": "0x9a19d553563fbc55c03e8fd39b793c5da4ff41f555c112793925db502e01ff5c",
+			"keccak256": "0x82fa10ba4c86e246f2e29d4ea4a1858e9f0c3d1299d80b33df7747f0fea8ec67",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://89af0406de190f7b3e89a0e5e02bf3c4036f680ce2ff26ae49f59149cf45a6c1",
-				"dweb:/ipfs/QmT96mA7ZB1HXPYpSxca6ZBf9VNLMpnwu3Y4G9xQUu82K6"
+				"bzz-raw://3d7427bb9ef1280eb4de232f74ee80a877081b1882b53a7558ca3900641df446",
+				"dweb:/ipfs/QmP4HQhZq3d6R9Hi8EjUHj43kHGW6jkXhGZFRiwWFZ9nXM"
 			]
 		}
 	},

@@ -209,6 +209,25 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "newFee",
+						"type": "uint256"
+					}
+				],
+				"name": "changeFee",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "decimals",
 				"outputs": [
@@ -216,6 +235,19 @@
 						"internalType": "uint8",
 						"name": "",
 						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "fee",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -405,10 +437,15 @@
 					"details": "See {IERC20-totalSupply}."
 				},
 				"transfer(address,uint256)": {
-					"details": "See {IERC20-transfer}. Requirements: - `to` cannot be the zero address. - the caller must have a balance of at least `value`."
+					"details": "Moves a `value` amount of tokens from the caller's account to `to`. Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event."
 				},
 				"transferFrom(address,address,uint256)": {
 					"details": "See {IERC20-transferFrom}. Skips emitting an {Approval} event indicating an allowance update. This is not required by the ERC. See {xref-ERC20-_approve-address-address-uint256-bool-}[_approve]. NOTE: Does not update the allowance if the current allowance is the maximum `uint256`. Requirements: - `from` and `to` cannot be the zero address. - `from` must have a balance of at least `value`. - the caller must have allowance for ``from``'s tokens of at least `value`."
+				}
+			},
+			"stateVariables": {
+				"fee": {
+					"details": "See {IERC20-transfer}. Requirements: - `to` cannot be the zero address. - the caller must have a balance of at least `value`."
 				}
 			},
 			"version": 1
@@ -436,11 +473,11 @@
 	},
 	"sources": {
 		"contracts/UmerToken_flattened.sol": {
-			"keccak256": "0x9a19d553563fbc55c03e8fd39b793c5da4ff41f555c112793925db502e01ff5c",
+			"keccak256": "0x82fa10ba4c86e246f2e29d4ea4a1858e9f0c3d1299d80b33df7747f0fea8ec67",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://89af0406de190f7b3e89a0e5e02bf3c4036f680ce2ff26ae49f59149cf45a6c1",
-				"dweb:/ipfs/QmT96mA7ZB1HXPYpSxca6ZBf9VNLMpnwu3Y4G9xQUu82K6"
+				"bzz-raw://3d7427bb9ef1280eb4de232f74ee80a877081b1882b53a7558ca3900641df446",
+				"dweb:/ipfs/QmP4HQhZq3d6R9Hi8EjUHj43kHGW6jkXhGZFRiwWFZ9nXM"
 			]
 		}
 	},
