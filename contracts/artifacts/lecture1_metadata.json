@@ -18,7 +18,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/lecture1.sol": "lecture1"
+			"contracts/Staking-Contract.sol": "lecture1"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -32,12 +32,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/lecture1.sol": {
-			"keccak256": "0x58516bcefb544750ea83cdedf46afdd53a87c7b6b9f0bce9c4ac6771cf8032b0",
+		"contracts/Staking-Contract.sol": {
+			"keccak256": "0xc4c7d86197fd0c7b550890295797d03662980558ab63fb672d928add257d9df2",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://61a58fafc146a06a4b05c8301a0ac2ac30200de388d58ca4ab337de79daa2578",
-				"dweb:/ipfs/QmTo6DP6pzASxQJhsKbqDJQoiWAXc4tcYNovsmico2Dzm6"
+				"bzz-raw://25699751eebcbb213954bf0f10d947d2029de47dbde8771d79e4a808e3c0c663",
+				"dweb:/ipfs/QmRiYL2fVvDGuS72NzuECpXdsJ7SU47NGXuGcRSJZ4sCnE"
 			]
 		}
 	},
