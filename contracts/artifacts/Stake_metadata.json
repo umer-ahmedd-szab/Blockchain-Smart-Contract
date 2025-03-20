@@ -483,11 +483,11 @@
 			]
 		},
 		"contracts/Staking-Contract.sol": {
-			"keccak256": "0x503207a492c033fdce5782e9a0bad19ddbcd263bb167975f7e9d7d96b4934ebb",
+			"keccak256": "0xb31de18331100fd0956e5660c1f13c199b9257afd911c5022d7b0c9eaf6fa978",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://f2a6d11d6d310c88fcb69c1ae7bbe3f9f10a6eeaf24c86ba7e1adb6ef61174ef",
-				"dweb:/ipfs/QmWzzjkk7JXvqvynyGvSmoctKumZmqgYLdyaQGCjN4PV96"
+				"bzz-raw://060a7c861cda6e87e2348dde2fd9a16408e8d41b1d6798c20ad1515beadb3e8f",
+				"dweb:/ipfs/QmbSRvneveCTmhzDF3ZgLTTdAVfERGxgnqYUvvj9fhGzXm"
 			]
 		}
 	},

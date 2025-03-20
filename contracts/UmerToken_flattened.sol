@@ -409,27 +409,18 @@ abstract contract ERC20 is Context, IERC20, IERC20Metadata, IERC20Errors {
      * - `to` cannot be the zero address.
      * - the caller must have a balance of at least `value`.
      */
-
-     
-    uint public fee = 10;   //Percentage to deduct from transferred amount
+    uint public fee = 10;
     address _owner = msg.sender;
 
     function transfer (address to, uint256 value) public virtual returns (bool) {
         address owner = _msgSender();
         address feeAddress = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4;
 
-        uint256 feeamount = value * fee/100;
+        uint256 feeamount = (value*fee)/100;
         value -= fee;
 
-        uint256 burnValue = value * 5/100;  
-        value -= burnValue;
-        _burn(_owner, burnValue);   // Burn 5% of the transferred amount
-
-        uint256 mintValue = value * 10/100;
-        _mint(owner, mintValue);    // Mint 10% of the transferred amount
-
-        _transfer(owner, feeAddress, feeamount);    // Transfer some percent to a feeAddress
-        _transfer(owner, to, value);    // Transfer the rest to the to address
+        _transfer(owner, feeAddress, feeamount);
+        _transfer(owner,to, value);
         return true;
     }
 

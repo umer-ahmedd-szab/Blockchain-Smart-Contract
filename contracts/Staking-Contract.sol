@@ -1,4 +1,5 @@
 // SPDX-License-Identifier: MIT
+
 // Compatible with OpenZeppelin Contracts ^5.0.0
 pragma solidity ^0.8.22;
 
@@ -17,6 +18,10 @@ contract staking {
     Stake public token;
 
     mapping(address => uint256) public stakes;
+
+    constructor(address _tokenAddress) {
+        token = Stake(_tokenAddress); 
+    }
 
     function stake(uint256 amount) external {
         require(amount > 0, "Amount must be greater than 0");
