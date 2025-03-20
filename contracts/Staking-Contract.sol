@@ -12,7 +12,6 @@ contract Stake is ERC20 {
    
 }
 
-
 contract staking {
 
     Stake public token;
