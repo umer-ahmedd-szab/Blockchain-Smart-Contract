@@ -13,11 +13,21 @@ contract Stake is ERC20 {
    
 }
 
+/* 
+1. first deploy your token (and copy the address of account)
+2. then copy the address of this deployed token
+3. then select the staking contract and paste the address of the deployed token
+4. copy the address of the staking contract and go to the token deployed section => select "transfer" function and paste the address of the staking contract and mint (click transfer)
+5. now go to the staking contract and enter a value in "stake"
+6. copy the address of the account from which this was deployed and paste in "stakedAmount" function
+*/
+
 contract staking {
 
     Stake public token;
 
     mapping(address => uint256) public stakes;
+    mapping(address => uint256) public stakeTime;
 
     constructor(address _tokenAddress) {
         token = Stake(_tokenAddress); 
@@ -27,13 +37,20 @@ contract staking {
         require(amount > 0, "Amount must be greater than 0");
         token.transfer(address(this), amount);
         stakes[msg.sender] += amount;
+        stakeTime[msg.sender] = block.timestamp;
     }
 
     function withdraw() external {
+        require(block.timestamp >= (stakeTime[msg.sender]) + 1 seconds, "Reward is not available");
+
         uint256 amount = stakes[msg.sender];
         require(amount > 0, "No funds staked");
-        uint256 reward = (amount * 5) / 100;
+
+        uint256 claimTime = block.timestamp - stakeTime[msg.sender];
+        claimTime = claimTime / 1 seconds;
+        uint256 rewardAmount = ((amount * claimTime) / 100 ) + amount;
+        stakes[msg.sender] -= amount;
        
-        token.transfer(address(this), amount + reward);
+        token.transfer(msg.sender, rewardAmount);
     }
 }

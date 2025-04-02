@@ -37,6 +37,25 @@
 						"type": "address"
 					}
 				],
+				"name": "stakeTime",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
 				"name": "stakes",
 				"outputs": [
 					{
@@ -137,11 +156,11 @@
 			]
 		},
 		"contracts/Staking-Contract.sol": {
-			"keccak256": "0xb31de18331100fd0956e5660c1f13c199b9257afd911c5022d7b0c9eaf6fa978",
+			"keccak256": "0x29ee0df15dca48074379d80e819b000a567fd3bf6bb8c76df790b07b3326094f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://060a7c861cda6e87e2348dde2fd9a16408e8d41b1d6798c20ad1515beadb3e8f",
-				"dweb:/ipfs/QmbSRvneveCTmhzDF3ZgLTTdAVfERGxgnqYUvvj9fhGzXm"
+				"bzz-raw://8bf440e2f490a1551f2a93e52e3e0c594c9f337f6b1c12272282c0211a4c643f",
+				"dweb:/ipfs/QmWe1nCV3rXMvMH5dJfc74gEL6S771ytV16XFWt4zLTvt4"
 			]
 		}
 	},
