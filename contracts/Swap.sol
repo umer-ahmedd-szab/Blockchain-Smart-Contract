@@ -31,7 +31,7 @@ contract Swapping {
 
     function swapFunc(uint amount) external {
         require(amount > 0, "Amount should be greater than 0");
-        tokenA.transfer(address(this), amount*rate);
+        tokenA.transferFrom(msg.sender, address(this), amount*rate);
         tokenB.transfer(msg.sender, amount);
         emit swapped(address(tokenA), address(tokenB), rate);
     }
