@@ -1,4 +1,3 @@
-// SPDX-License-Identifier: MIT
 
 // File: @openzeppelin/contracts/token/ERC20/IERC20.sol
 
@@ -409,28 +408,9 @@ abstract contract ERC20 is Context, IERC20, IERC20Metadata, IERC20Errors {
      * - `to` cannot be the zero address.
      * - the caller must have a balance of at least `value`.
      */
-    uint public fee = 10;
-    address _owner = msg.sender;
-
-    function transfer (address to, uint256 value) public virtual returns (bool) {
+    function transfer(address to, uint256 value) public virtual returns (bool) {
         address owner = _msgSender();
-        address feeAddress = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4;
-
-        uint256 feeamount = (value*fee)/100;
-        value -= fee;
-
-        _transfer(owner, feeAddress, feeamount);
-        _transfer(owner,to, value);
-        return true;
-    }
-
-    modifier onlyOwner() {
-        require(_msgSender() == _owner, "Not an owner");
-        _;
-    }
-
-    function changeFee(uint newFee) public virtual onlyOwner returns (bool) {
-        fee = newFee;
+        _transfer(owner, to, value);
         return true;
     }
 

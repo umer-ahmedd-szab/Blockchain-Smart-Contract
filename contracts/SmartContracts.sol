@@ -107,7 +107,6 @@ contract TaxedToken is ERC20, Ownable {
         
         uint256 taxAmount = (amount * taxRate) / 10000;
         uint256 transferAmount = amount - taxAmount;
-        
         _transfer(sender, taxWallet, taxAmount);
         _transfer(sender, recipient, transferAmount);
     }
