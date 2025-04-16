@@ -428,7 +428,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Quiz02.sol": "MyToken"
+			"contracts/Practice.sol": "MyToken"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -482,12 +482,12 @@
 				"dweb:/ipfs/Qmax9WHBnVsZP46ZxEMNRQpLQnrdE4dK8LehML1Py8FowF"
 			]
 		},
-		"contracts/Quiz02.sol": {
-			"keccak256": "0x6a5065ef076228e9ce9394a909b8fb1f7eebd14010295307e17af83a649949b7",
+		"contracts/Practice.sol": {
+			"keccak256": "0x1476641d3a0071853d46df6d59e3fed4e670c71352e02ea517803cb764e36352",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://9089b561e26f27457ea710ed61ab69656adba5e7af74c3e4cff5c78cb6926a3a",
-				"dweb:/ipfs/QmNXCNLe5fPepVNvJCGEdeFqPT2LEJhdY6Sj6k3bs1e6yo"
+				"bzz-raw://b470102bf976353f588dd7611ac8dd5b0db597067fa1ebd82bdf87e44689f42f",
+				"dweb:/ipfs/QmPLBft7ZMvAfBkP8rXuHJTUzoL8YnNto8FsjLyrUw8kv3"
 			]
 		}
 	},
